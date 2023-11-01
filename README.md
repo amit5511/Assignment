@@ -21,6 +21,8 @@
 2-> colne the git repo, install required dependencies and start node js server<br/>
 3 -> Install nginx for respond to network requests.<br/>
 4-> configure nginx config.
+# Live link <br/>
+amit.goodspace.akrow.in.net
 
 
 
