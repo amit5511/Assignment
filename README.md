@@ -10,11 +10,11 @@
 4 -> Run npm run start  to start your server<br/>
 
 # Dependency<br/>
-dotenv<br/>
-express<br/>
-mongoose<br/>
-openai<br/>
-socket.io<br/>
+1 -> dotenv<br/>
+2 -> express<br/>
+3 -> mongoose<br/>
+4 -> openai<br/>
+5 -> socket.io<br/>
 
 # Deployment process <br/>
 1-> Buy a domain and vmware (ubuntu os) on google cloud .<br/>
