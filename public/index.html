@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Chat BOT</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <script src="/socket.io/socket.io.js">
+
+    </script>
+    <div class="chat-container">
+        <div id="chatbot" class="chat-box">
+            <div class="message received" id="result"></div>
+        </div>
+        <div class="input-container">
+            <input id="query" type="text" autofocus autocomplete="" placeholder="Entre your text" required />
+            <button id="sendButton" onclick="searchQuery()">Search</button>
+        </div>
+    </div>
+    <script src="index.js"></script>
+    <script>
+        (() => {
+            fetch('/api/v1/allsearch').then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json();
+            })
+                .then(data => {
+                    for (let x of data) {
+                        createElement(x.query, "sent")
+                        createElement(x.result, "received")
+                    }
+                })
+                .catch(error => {
+                    console.error('There was a problem with the fetch operation:', error);
+                });
+        })()
+    </script>
+</body>
+
+</html>
